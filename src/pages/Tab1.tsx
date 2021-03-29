@@ -1,8 +1,9 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
+import { RouteComponentProps } from 'react-router-dom';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
-const Tab1: React.FC = () => {
+const Tab1: React.FC<RouteComponentProps> = (props) => {
   return (
     <IonPage>
       <IonHeader>
@@ -17,6 +18,14 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Tab 1 page" />
+        <IonButton
+            size="large"
+            onClick={e => {
+                e.preventDefault();
+                props.history.push('/home');
+            }}>
+            Home
+        </IonButton>
       </IonContent>
     </IonPage>
   );
