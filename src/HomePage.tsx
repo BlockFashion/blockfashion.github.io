@@ -1,8 +1,11 @@
-import { useHistory, Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import {
   IonApp,
+  IonRouterOutlet,
   IonButton
 } from '@ionic/react';
+
+import { IonReactRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -23,20 +26,18 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import App from "./App"
+import Home from "./pages/Home"
+
 const HomePage: React.FC = () => {
-    let history = useHistory();
     return <IonApp>
-        <Router>
-            <IonButton
-                size="large"
-                onClick={e => {
-                    e.preventDefault();
-                    history.push('/App');
-                }}>
-                App
-            </IonButton>
-        </Router>
-    </IonApp>
+            <IonReactRouter>
+                <IonRouterOutlet>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/App" component={App} />
+                </IonRouterOutlet>
+            </IonReactRouter>
+        </IonApp>
 }
 
 export default HomePage;
