@@ -1,0 +1,7 @@
+{
+  "name": "blockfashion.github.io",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
