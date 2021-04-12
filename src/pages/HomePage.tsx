@@ -10,7 +10,7 @@ import {
   IonHeader, IonTitle, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel,
 } from '@ionic/react';
 
-import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
+import { pin, key, wine, walk } from 'ionicons/icons';
 
 import './HomePage.css';
 
@@ -32,7 +32,7 @@ const HomePage: React.FC<RouteComponentProps> = (props) => {
                         App
                     </IonButton>
                     <IonText id="titolo">
-                        <h1 style={{fontSize: "100px", display: "table-cell", verticalAlign: "middle"}}>
+                        <h1 style={{fontSize: "100px", display: "table-cell", verticalAlign: "middle", color:"white"}}>
                             Titolo progetto
                         </h1>
                     </IonText>
@@ -40,59 +40,58 @@ const HomePage: React.FC<RouteComponentProps> = (props) => {
                 <div id="about">
                     <div id="centered">
                         <h2>NFTs to certificate your limited editions.</h2>
-                        <IonGrid style={{marginLeft: "auto"}}>
+                        <IonGrid>
                             <IonRow>
-                                <IonCol>
-                                    <IonCard className="cardabout">
+                                {/* Sta roba perchè class="ion-align-items-center" non va */}
+                                <IonCol sizeXs="0" sizeSm="3" />
+                                <IonCol sizeXs="12" sizeSm="3">
+                                    <IonCard>
                                         <IonItem>
-                                            <IonIcon icon={pin} slot="start" />
-                                            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
+                                            <IonIcon icon={key} slot="start" />
+                                            <IonLabel>All the safety you need</IonLabel>
                                         </IonItem>
-
                                         <IonCardContent>
-                                            This is content, without any paragraph or header tags,
-                                            within an ion-cardContent element.
+                                            Much safeness very blockchain.
                                         </IonCardContent>
                                     </IonCard>
                                 </IonCol>
-                                <IonCol>
-                                    <IonCard style={{width: "30%", marginLeft: "20%"}}>
+                                <IonCol sizeXs="12" sizeMd="3">
+                                    <IonCard>
                                         <IonItem>
                                             <IonIcon icon={pin} slot="start" />
-                                            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
+                                            <IonLabel>Cheap enough</IonLabel>
                                         </IonItem>
 
                                         <IonCardContent>
-                                            This is content, without any paragraph or header tags,
-                                            within an ion-cardContent element.
+                                            Cheap maybe
                                         </IonCardContent>
                                     </IonCard>
                                 </IonCol>
                             </IonRow>
                             <IonRow>
-                                <IonCol>
-                                    <IonCard style={{width: "30%", marginLeft: "50%"}}>
+                                {/* Sta roba perchè class="ion-align-items-center" non va */}
+                                <IonCol sizeXs="0" sizeSm="3" />
+                                <IonCol sizeXs="12" sizeSm="3">
+                                    <IonCard>
                                         <IonItem>
-                                            <IonIcon icon={pin} slot="start" />
-                                            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
+                                            <IonIcon icon={wine} slot="start" />
+                                            <IonLabel>Very cool</IonLabel>
                                         </IonItem>
 
                                         <IonCardContent>
-                                            This is content, without any paragraph or header tags,
-                                            within an ion-cardContent element.
+                                            It's cool even if it's hot
                                         </IonCardContent>
                                     </IonCard>
                                 </IonCol>
-                                <IonCol>
-                                    <IonCard style={{width: "30%", marginLeft: "20%"}}>
+                                <IonCol sizeXs="12" sizeSm="3">
+                                    <IonCard>
                                         <IonItem>
-                                            <IonIcon icon={pin} slot="start" />
-                                            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
+                                            <IonIcon icon={walk} slot="start" />
+                                            <IonLabel>Very digital</IonLabel>
                                         </IonItem>
 
                                         <IonCardContent>
-                                            This is content, without any paragraph or header tags,
-                                            within an ion-cardContent element.
+                                            It's digital
                                         </IonCardContent>
                                     </IonCard>
                                 </IonCol>
