@@ -10,6 +10,10 @@
     top: 0;
   }
 
+#copertina {
+    height: 100vh;
+}
+
 #titolo {
     text-align: center;
     display: table;
@@ -26,4 +30,38 @@
     right: 0;
     margin-right: 20px;
     position: absolute;
+}
+
+#about {
+    min-height: 20vh;
+    width: 100%;
+    position: relative;
+    background-color: aliceblue;
+    color: black;
+    left: 0;
+    align-items: center;
+    text-align: center;
+    display: table;
+}
+
+#centered{
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.footer {
+    min-height: 5vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    color: white;
+    left: 0;
+    align-items: center;
+    text-align: center;
+    display: table;
+}
+
+.cardabout{
+    width: "30%";
 }
